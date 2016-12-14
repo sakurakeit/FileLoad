@@ -19,7 +19,7 @@
     <table class="table table-hover table-bordered" id="table" class="sortable">
         <tr style="border: solid 1px #000">
             <td align="center"><b>File_id</b></td>
-            <td align="center"><b>Path</b></td>
+            <td align="center"><b>Name File</b></td>
             <td align="center"><b>Link</b></td>
             <td align="center"><b>Date load</b></td>
         </tr>
@@ -28,7 +28,7 @@
             foreach ($data['fileTable'] as $row) {
                 echo "<tr>\n";
                 echo "<td>" . $row['id'] . "</td>\n";
-                echo "<td><a>" . $row['path'] . "</a></td>\n";
+                echo "<td><a>" . $row['name_file'] . "</a></td>\n";
                 echo "<td><a href='files/" . $row['path'] . "' download>download</a></td>\n";
                 echo "<td>" . $row['date_load'] . "</td>\n";
                 echo "</tr>\n";

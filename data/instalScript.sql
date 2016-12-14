@@ -12,7 +12,8 @@ CREATE TABLE `tbl_files` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `path` VARCHAR( 255 ) ,
 `user_id` int(11),
-`date_load` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+`date_load` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+`name_file` VARCHAR( 255 )
 ) ENGINE = InnoDB;
 
 INSERT INTO tbl_user ( email, password) VALUES('admin@admin', md5('admin'));

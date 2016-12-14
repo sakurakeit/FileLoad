@@ -20,11 +20,12 @@ class Model_files extends Model
         }
         return $fileTable;
     }
-    public function insertFile($fileName,$userId){
-        $query =  "INSERT INTO tbl_files ( path, user_id) VALUES(:fileName,:userId)";
+    public function insertFile($fileName,$userId,$nameFile){
+        $query =  "INSERT INTO tbl_files ( path, user_id, name_file) VALUES(:fileName,:userId, :nameFile)";
         $stmt = $this->db->prepare($query);
         $stmt->bindParam(':fileName', $fileName);
         $stmt->bindParam(':userId', $userId);
+        $stmt->bindParam(':nameFile', $nameFile);
         $stmt->execute();
         $result = $stmt->rowCount();
         return $result;
